@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node-dev --respawn ./practice.ts",
-    "dev": "ts-node-dev index.ts"
+    "start": "ts-node-dev --respawn ./MrJOE/index.ts",
+    "dev": "ts-node-dev PRACTICE/main.ts"
   },
   "keywords": [],
   "author": "",

@@ -46,6 +46,7 @@ const mainApp = (app:Application) =>{
     //     }
     // })
 
+
     app.post("/api/v1/create-data", (req:Request, res:Response):Response=>{
         try{
             const {name, course} = req.body
@@ -138,4 +139,6 @@ const mainApp = (app:Application) =>{
     })
   
 };
+
 export default mainApp
+
