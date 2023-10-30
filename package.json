@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node-dev --respawn ./YouTubeBackEnd/index.ts",
+    "start": "ts-node-dev --respawn ./PRACTICE/practice.ts",
     "dev": "ts-node-dev PRACTICE/main.ts"
   },
   "keywords": [],

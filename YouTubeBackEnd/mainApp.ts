@@ -141,7 +141,7 @@ const mainApp = (app:Application) =>{
         try {
             const {data : userData} = req.body
 
-            const showPath = path.join(__dirname, "data", "database.json")
+            const showPath = path.join(__dirname, "../data", "database.json")
 
             fs.readFile(showPath, (err, data)=>{
                 if(err){
@@ -152,7 +152,7 @@ const mainApp = (app:Application) =>{
                     if(lodash.some(readingData, userData)){
                         console.log("Already in database");
                         res.status(statusCode.Created).json({
-                            message:"Good to go",
+                            message:"Good",
                             data:readingData
                         })
                         
@@ -164,13 +164,14 @@ const mainApp = (app:Application) =>{
                             console.log('Done');                            
                         });
                         res.status(statusCode.Ok).json({
-                            message:"Read",
+                            message:"Read", 
                             data:readingData
                         })
-                        
+                         
                     }
                 }
             })
+
 
         } catch (error:any) {
             res.status(statusCode.BAD_REQUEST).json({

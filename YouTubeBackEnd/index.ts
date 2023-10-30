@@ -1,6 +1,7 @@
 import express, { Application } from 'express'
 import mainApp from './mainApp'
 
+
 const app:Application = express()
 app.use(express.json())
 

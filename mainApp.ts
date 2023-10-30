@@ -33,18 +33,18 @@ const mainApp = (app:Application) =>{
     //     }
     // })
 
-    // app.get("/api/v1/read-data", (req:Request, res:Response)=>{
-    //     try{
-    //         return res.status(statusCode.Ok).json({
-    //             message:"Reading from database",
-    //             data:database,
-    //         })
-    //     }catch (error){
-    //         return res.status(statusCode.BAD_REQUEST).json({
-    //             message:"Error reading from database"
-    //         })
-    //     }
-    // })
+    app.get("/api/v1/read-data", (req:Request, res:Response)=>{
+        try{
+            return res.status(statusCode.Ok).json({
+                message:"Reading from database",
+                data:database,
+            })
+        }catch (error){
+            return res.status(statusCode.BAD_REQUEST).json({
+                message:"Error reading from database"
+            })
+        }
+    })
 
 
     app.post("/api/v1/create-data", (req:Request, res:Response):Response=>{
@@ -129,7 +129,8 @@ const mainApp = (app:Application) =>{
             database= newDataBase
 
             return res.status(statusCode.Ok).json({
-                
+                message:"Successfully deleted",
+                data:database
             })
         }catch(error){
             return res.status(statusCode.BAD_REQUEST).json({
